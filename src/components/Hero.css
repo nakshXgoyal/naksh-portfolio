@@ -1,0 +1,139 @@
+.hero {
+  padding-top: 72px;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero__title {
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 600;
+  line-height: 1.08;
+  color: var(--ink);
+}
+
+.hero__subtitle {
+  margin-top: 20px;
+  font-size: 17px;
+  color: var(--ink-soft);
+  max-width: 46ch;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn--primary {
+  background: var(--indigo);
+  color: white;
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+}
+
+.btn--ghost {
+  border: 1px solid var(--ink);
+  color: var(--ink);
+}
+
+.btn--ghost:hover {
+  transform: translateY(-2px);
+}
+
+/* Terminal signature element */
+.terminal {
+  background: #0f1420;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(16, 24, 40, 0.25);
+  border: 1px solid #1e2536;
+}
+
+.terminal__bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #161c2b;
+  border-bottom: 1px solid #232b3f;
+}
+
+.terminal__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.terminal__dot--r { background: #ff5f57; }
+.terminal__dot--y { background: #febc2e; }
+.terminal__dot--g { background: #28c840; }
+
+.terminal__title {
+  margin-left: 8px;
+  font-size: 12px;
+  color: #6b7690;
+}
+
+.terminal__body {
+  padding: 22px 20px;
+  font-size: 14px;
+  min-height: 160px;
+}
+
+.terminal__prompt {
+  color: var(--coral);
+}
+
+.terminal__line {
+  color: #d7dce6;
+}
+
+.terminal__cursor {
+  display: inline-block;
+  width: 7px;
+  height: 15px;
+  background: #d7dce6;
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
+
+.terminal__output {
+  color: #7ee787;
+  margin-top: 10px;
+  opacity: 0;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 780px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+}

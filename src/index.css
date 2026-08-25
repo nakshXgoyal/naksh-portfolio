@@ -1,0 +1,121 @@
+:root {
+  /* Color tokens */
+  --bg: #eef1f6;
+  --bg-raised: #ffffff;
+  --ink: #101828;
+  --ink-soft: #4a5468;
+  --muted: #7b8496;
+  --line: #d2d9e6;
+  --indigo: #4f46e5;
+  --indigo-soft: #eeecfd;
+  --coral: #ff6b4a;
+  --add: #16a34a;
+  --remove: #dc2626;
+
+  /* Type */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--indigo);
+  color: white;
+}
+
+/* Visible focus ring for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--indigo);
+  outline-offset: 3px;
+}
+
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--indigo);
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--indigo);
+  display: inline-block;
+}
+
+section {
+  padding: 96px 0;
+}
+
+@media (max-width: 640px) {
+  section {
+    padding: 64px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
