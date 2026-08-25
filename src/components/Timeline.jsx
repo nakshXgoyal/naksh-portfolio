@@ -20,7 +20,7 @@ const LOG = [
     role: 'B.Tech, Computer Science-AIML',
     org: 'Dr. APJ Abdul kalam technical university, Lucknow',
     message:
-      'Focused on data structures, distributed systems, and web development. Led a 4-person team through the capstone project.',
+      'Focused on data structures, Artificial Intelligence and Machine Learning, and web development.',
   },
 ]
 
